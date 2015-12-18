@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1erNivel.master.cs" Inherits="Web_COSUDE.MasterPages.Site1erNivel" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>UCA | RRDACC</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+        
+
+    <%--Boostrap CSS--%>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="../bootstrap_3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap_3.3.5/css/bootstrap-theme.min.css">
+
+    <asp:ContentPlaceHolder ID="cphCSS1" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="css/style.responsive.css" media="all">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:100|Open+Sans&amp;subset=latin">
+
+
+    <%--Mis Estilos--%>
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <asp:ContentPlaceHolder ID="cphCSS2" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+
+</head>
+<body>
+    <div id="art-main">
+        <header class="art-header">
+
+            <div class="art-shapes">
+            </div>
+
+            <a href="#" target="_top" class="art-logo art-logo-150071586">
+                <img src="images/logo-150071586.png" alt="">
+            </a><a href="#" target="_top" title="RRDACC" class="art-logo art-logo-1321991188">
+                <img src="images/logo-1321991188.png" alt="">
+            </a>
+
+
+
+        </header>
+        <div class="art-sheet clearfix">
+            <div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-sidebar1">
+                            <div class="art-vmenublock clearfix">
+                                <div class="art-vmenublockheader">
+                                    <h3 class="t">Menú</h3>
+                                </div>
+                                <div class="art-vmenublockcontent">
+                                    <ul class="art-vmenu">
+                                        <li><a href="catalogo.aspx" 
+                                            <asp:ContentPlaceHolder ID="cphCatalogoMenuActivo" runat="server"></asp:ContentPlaceHolder> >Catálogo</a>
+                                            <ul class="active">
+                                                <li><a href="catalogo/actividad.html">Actividad</a></li>
+                                                <li><a href="catalogo/efecto.aspx">Efecto</a></li>
+                                                <li><a href="catalogo/persona.html">Persona</a>
+                                                    <ul class="active">
+                                                        <li><a href="catalogo/persona/cargo.html">Cargo</a></li>
+                                                        <li><a href="catalogo/persona/institucion.html">Institución</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="catalogo/resultado.html">Resultado</a></li>
+                                                <li><a href="catalogo/subactividad.html">SubActividad</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="control-de-asistencias.html" <asp:ContentPlaceHolder ID="cphControlAsistenciaMenuActivo" runat="server"></asp:ContentPlaceHolder> >Control de Asistencias</a></li>
+                                        <li><a href="reportes.html">Reportes</a>
+                                            <ul class="active">
+                                                <li><a href="reportes/reporte-1.html">Reporte 1</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="gestion-de-usuarios.html" <asp:ContentPlaceHolder ID="cphGestionUsuarioMenuActivo" runat="server"></asp:ContentPlaceHolder> >Gestión de Usuarios</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="art-layout-cell art-content">
+                            <article class="art-post art-article">
+                                <div class="art-postmetadataheader">
+                                    <h2 class="art-postheader">
+                                        
+                                    <asp:ContentPlaceHolder ID="cphTituloForm" runat="server">
+                                    </asp:ContentPlaceHolder>
+
+                                    </h2>
+                                </div>
+                                <div class="art-postcontent art-postcontent-0 clearfix">
+
+                                    <asp:ContentPlaceHolder ID="cphFormulario" runat="server">
+                                    </asp:ContentPlaceHolder>
+
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="art-footer">
+            <div class="art-footer-inner">
+                <div style="position: relative; padding-left: 10px; padding-right: 10px">
+                    <p><span style="color: rgb(255, 255, 255); font-family: Raleway, sans-serif; font-size: 14px; font-weight: bold; line-height: 20px; widows: 1; background-color: rgb(255, 0, 0);">Proyecto Fortalecimiento e Innovación Académica-Científica en Reducción de&nbsp;</span><span style="color: rgb(255, 255, 255); font-family: Raleway, sans-serif; font-size: 14px; font-weight: bold; line-height: 20px; background-color: rgb(255, 0, 0);">Riesgo de Desastres y Adaptación al Cambio Climático en la Universidad Centroamericana&nbsp;</span></p>
+                    <span style="color: rgb(255, 255, 255); font-family: Raleway, sans-serif; font-size: 14px; font-weight: bold; line-height: 20px; widows: 1; background-color: rgb(255, 0, 0);">Teléfono: 22783923 ext. 1152-1147.</span><p></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <%--JS del Sitio--%>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script.responsive.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphJS1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%--Boostrap JS--%>
+    <script src="../bootstrap_3.3.5/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphJS2" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+</body>
+</html>
+
