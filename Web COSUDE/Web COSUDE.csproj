@@ -65,8 +65,14 @@
     <Content Include="bootstrap_3.3.5\js\bootstrap.min.js" />
     <Content Include="bootstrap_3.3.5\js\npm.js" />
     <Content Include="catalogo\actividad.aspx" />
+    <Content Include="catalogo\documento.aspx" />
     <Content Include="catalogo\efecto.aspx" />
+    <Content Include="catalogo\organizacion.aspx" />
+    <Content Include="catalogo\persona.aspx" />
+    <Content Include="catalogo\persona\cargo.aspx" />
+    <Content Include="catalogo\persona\institucion.aspx" />
     <Content Include="catalogo\resultado.aspx" />
+    <Content Include="catalogo\subactividad.aspx" />
     <Content Include="css\estilos.css" />
     <Content Include="css\select2.min.css" />
     <Content Include="css\style.css" />
@@ -164,6 +170,13 @@
     <Compile Include="catalogo\actividad.aspx.designer.cs">
       <DependentUpon>actividad.aspx</DependentUpon>
     </Compile>
+    <Compile Include="catalogo\documento.aspx.cs">
+      <DependentUpon>documento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\documento.aspx.designer.cs">
+      <DependentUpon>documento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="catalogo\efecto.aspx.cs">
       <DependentUpon>efecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,12 +184,47 @@
     <Compile Include="catalogo\efecto.aspx.designer.cs">
       <DependentUpon>efecto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="catalogo\organizacion.aspx.cs">
+      <DependentUpon>organizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\organizacion.aspx.designer.cs">
+      <DependentUpon>organizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\persona.aspx.cs">
+      <DependentUpon>persona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\persona.aspx.designer.cs">
+      <DependentUpon>persona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\persona\cargo.aspx.cs">
+      <DependentUpon>cargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\persona\cargo.aspx.designer.cs">
+      <DependentUpon>cargo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\persona\institucion.aspx.cs">
+      <DependentUpon>institucion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\persona\institucion.aspx.designer.cs">
+      <DependentUpon>institucion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="catalogo\resultado.aspx.cs">
       <DependentUpon>resultado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="catalogo\resultado.aspx.designer.cs">
       <DependentUpon>resultado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\subactividad.aspx.cs">
+      <DependentUpon>subactividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\subactividad.aspx.designer.cs">
+      <DependentUpon>subactividad.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Site1erNivel.Master.cs">
       <DependentUpon>Site1erNivel.Master</DependentUpon>

@@ -64,22 +64,22 @@
                                         <li><a href="catalogo.aspx" 
                                             <asp:ContentPlaceHolder ID="cphCatalogoMenuActivo" runat="server"></asp:ContentPlaceHolder> >Catálogo</a>
                                             <ul class="active">
-                                                <li><a href="catalogo/actividad.html">Actividad</a></li>
+                                                <li><a href="catalogo/actividad.aspx">Actividad</a></li>
                                                 <li><a href="catalogo/efecto.aspx">Efecto</a></li>
-                                                <li><a href="catalogo/persona.html">Persona</a>
+                                                <li><a href="catalogo/persona.aspx">Persona</a>
                                                     <ul class="active">
-                                                        <li><a href="catalogo/persona/cargo.html">Cargo</a></li>
-                                                        <li><a href="catalogo/persona/institucion.html">Institución</a></li>
+                                                        <li><a href="catalogo/persona/cargo.aspx">Cargo</a></li>
+                                                        <li><a href="catalogo/persona/institucion.aspx">Institución</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="catalogo/resultado.html">Resultado</a></li>
-                                                <li><a href="catalogo/subactividad.html">SubActividad</a></li>
+                                                <li><a href="catalogo/resultado.aspx">Resultado</a></li>
+                                                <li><a href="catalogo/subactividad.aspx">SubActividad</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="control-de-asistencias.html" <asp:ContentPlaceHolder ID="cphControlAsistenciaMenuActivo" runat="server"></asp:ContentPlaceHolder> >Control de Asistencias</a></li>
-                                        <li><a href="reportes.html">Reportes</a>
+                                        <li><a href="control-de-asistencias.aspx" <asp:ContentPlaceHolder ID="cphControlAsistenciaMenuActivo" runat="server"></asp:ContentPlaceHolder> >Control de Asistencias</a></li>
+                                        <li><a href="reportes.aspx">Reportes</a>
                                             <ul class="active">
-                                                <li><a href="reportes/reporte-1.html">Reporte 1</a></li>
+                                                <li><a href="reportes/reporte-1.aspx">Reporte 1</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="gestion-de-usuarios.html" <asp:ContentPlaceHolder ID="cphGestionUsuarioMenuActivo" runat="server"></asp:ContentPlaceHolder> >Gestión de Usuarios</a></li>

@@ -14,6 +14,10 @@ table.tbfrm, table.tbfrm tr, table.tbfrm tr td{
 	
 }
 
+table.tbfrm tr td.tam-tercera-parte{
+    width: 33.3%;
+}
+
 table.tbfrm tr td.tam-mitad{
     width: 50%;
 }

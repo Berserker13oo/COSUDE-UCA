@@ -7,90 +7,117 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Web_COSUDE.MasterPages {
+namespace Web_COSUDE.catalogo.personas {
     
     
-    public partial class Site3erNivel {
+    public partial class institucion {
         
         /// <summary>
-        /// Control cphCSS1.
+        /// Control Form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphCSS1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// Control cphCSS2.
+        /// Control txbInstitucionID.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphCSS2;
+        protected global::System.Web.UI.WebControls.TextBox txbInstitucionID;
         
         /// <summary>
-        /// Control cphCatalogoMenuActivo.
+        /// Control txbNombreInstitucion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphCatalogoMenuActivo;
+        protected global::System.Web.UI.WebControls.TextBox txbNombreInstitucion;
         
         /// <summary>
-        /// Control cphControlAsistenciaMenuActivo.
+        /// Control txbDescripcionInstitucion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphControlAsistenciaMenuActivo;
+        protected global::System.Web.UI.WebControls.TextBox txbDescripcionInstitucion;
         
         /// <summary>
-        /// Control cphGestionUsuarioMenuActivo.
+        /// Control btnPrimero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphGestionUsuarioMenuActivo;
+        protected global::System.Web.UI.WebControls.LinkButton btnPrimero;
         
         /// <summary>
-        /// Control cphTituloForm.
+        /// Control btnAnterior.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphTituloForm;
+        protected global::System.Web.UI.WebControls.LinkButton btnAnterior;
         
         /// <summary>
-        /// Control cphFormulario.
+        /// Control btnSiguiente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphFormulario;
+        protected global::System.Web.UI.WebControls.LinkButton btnSiguiente;
         
         /// <summary>
-        /// Control cphJS1.
+        /// Control btnUltimo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphJS1;
+        protected global::System.Web.UI.WebControls.LinkButton btnUltimo;
         
         /// <summary>
-        /// Control cphJS2.
+        /// Control btnNuevoEfecto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphJS2;
+        protected global::System.Web.UI.WebControls.Button btnNuevoEfecto;
+        
+        /// <summary>
+        /// Control btnModificarEfecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificarEfecto;
+        
+        /// <summary>
+        /// Control btnEliminarEfecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEliminarEfecto;
+        
+        /// <summary>
+        /// Control btnGuardarEfecto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardarEfecto;
     }
 }
