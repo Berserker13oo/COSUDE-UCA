@@ -3,6 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphCSS1" runat="server">    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphCSS2" runat="server">
+    <style type="text/css">
+    .auto-style1 {
+        width: 977px;
+    }
+</style>
 </asp:Content>
 
 <asp:Content ID="Content6" ContentPlaceHolderID="cphTituloForm" runat="server">
@@ -15,7 +20,7 @@
             <asp:ScriptManager EnablePageMethods="true" ID="ScriptManager1" runat="server">
             </asp:ScriptManager>
             <tr>
-                <td>
+                <td class="auto-style1">
                     <div class="form-group">
                         <label for="lbIdentificador">Identificador: *</label>
                         <asp:TextBox ID="txbIdentificadorEfecto" runat="server" CssClass="form-control" placeholder="Identificador" />
@@ -23,7 +28,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style1">
                     <div class="form-group">
                         <label for="lbNombreEfecto">Nombre del efecto: *</label>
                         <asp:TextBox ID="txbNombreEfecto" TextMode="multiline" Rows="3" runat="server" CssClass="form-control" placeholder="Nombre del Efecto" />
@@ -31,7 +36,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style1">
                     <div class="form-group">
                         <label for="lbDescripcionEfecto">Descripción del efecto:</label>
                         <asp:TextBox ID="txbDescripcionEfecto" TextMode="multiline" Rows="5" runat="server" CssClass="form-control" placeholder="Descripción del Efecto" />
@@ -41,22 +46,22 @@
 
 
             <tr>
-                <td class="botones-catalogo">
+                <td class="botones-catalogo" style="width: 977px">
                     <div class="btn-catalogo-navegacion">
-                        <asp:LinkButton ID="a" runat="server" Text="<span class='glyphicon glyphicon-fast-backward'></span>" CssClass="btn btn-primary" />
-                        <asp:LinkButton ID="btnAnterior" runat="server" Text="<span class='glyphicon glyphicon-backward'></span>" CssClass="btn btn-primary" />
-                        <asp:LinkButton ID="btnSiguiente" runat="server" Text="<span class='glyphicon glyphicon-forward'></span>" CssClass="btn btn-primary" />
-                        <asp:LinkButton ID="btnUltimo" runat="server" Text="<span class='glyphicon glyphicon-fast-forward'></span>" CssClass="btn btn-primary" />
+                        <asp:LinkButton ID="btnPrimero" runat="server" Text="<span class='glyphicon glyphicon-fast-backward'></span>" CssClass="btn btn-primary" OnClientClick="return false;"  />
+                        <asp:LinkButton ID="btnAnterior" runat="server" Text="<span class='glyphicon glyphicon-backward'></span>" CssClass="btn btn-primary" OnClientClick="return false;" />
+                        <asp:LinkButton ID="btnSiguiente" runat="server" Text="<span class='glyphicon glyphicon-forward'></span>" CssClass="btn btn-primary" OnClientClick="return false;" OnClick="btnSiguiente_Click" />
+                        <asp:LinkButton ID="btnUltimo" runat="server" Text="<span class='glyphicon glyphicon-fast-forward'></span>" CssClass="btn btn-primary" OnClientClick="return false;" />
                     </div>
                 </td>
             </tr>
             <tr>
-                <td class="botones-catalogo">
+                <td class="botones-catalogo" style="width: 977px">
 
                     <div class="btn-catalogo-crud">
-                        <asp:Button CssClass="btn btn-primary" Text="Nuevo" ID="btnNuevoEfecto" runat="server" />
-                        <asp:Button CssClass="btn btn-primary" Text="Modificar" ID="btnModificarEfecto" runat="server" />
-                        <asp:Button CssClass="btn btn-primary" Text="Eliminar" ID="btnEliminarEfecto" runat="server" />
+                        <asp:Button CssClass="btn btn-primary" Text="Nuevo" ID="btnNuevoEfecto" runat="server" OnClick="btnNuevoEfecto_Click" />
+                        <asp:Button CssClass="btn btn-primary" Text="Modificar" ID="btnModificarEfecto" runat="server" OnClick="btnModificarEfecto_Click" />
+                        <asp:Button CssClass="btn btn-primary" Text="Eliminar" ID="btnEliminarEfecto" runat="server" OnClick="btnEliminarEfecto_Click" />
                         <asp:Button CssClass="btn btn-primary" Text="Guardar" ID="btnGuardarEfecto" runat="server" OnClick="btnGuardarEfecto_Click" />
                     </div>
                 </td>

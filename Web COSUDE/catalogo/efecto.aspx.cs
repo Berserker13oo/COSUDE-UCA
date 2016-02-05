@@ -14,7 +14,6 @@ namespace Web_COSUDE.catalogo
         private List<SPObtenerEfecto_Result> ListaEfectos = new List<SPObtenerEfecto_Result>();
         int Posicion = 0;
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarDatos();
@@ -32,7 +31,6 @@ namespace Web_COSUDE.catalogo
                 try
                 {
                     m.AgregarEfecto(this.txbIdentificadorEfecto.Text, this.txbNombreEfecto.Text, this.txbDescripcionEfecto.Text);
-                    //AlertMensaje("Registro ingresado con éxito");
                 }
                 catch (Exception ex)
                 {
@@ -63,6 +61,49 @@ namespace Web_COSUDE.catalogo
             ListaEfectos = m.GetEfectos().ToList();
         }
 
+        private void LimpiarCampos()
+        {
+            this.txbIdentificadorEfecto.Text = "";
+            this.txbNombreEfecto.Text = "";
+            this.txbDescripcionEfecto.Text = "";
+        }
+
+        protected void btnModificarEfecto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m.ModificarEfecto(this.txbIdentificadorEfecto.Text, this.txbNombreEfecto.Text, this.txbDescripcionEfecto.Text);
+            }
+            catch (Exception ex)
+            {
+                AlertMensaje("Ocurrió un error mientras se realizaba la operación solicitada.");
+            }
+        }
+
+        protected void btnNuevoEfecto_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        protected void btnEliminarEfecto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m.EliminarEfecto(this.txbIdentificadorEfecto.Text);
+                LimpiarCampos();
+            }
+            catch (Exception ex)
+            {
+                AlertMensaje("Ocurrió un error mientras se realizaba la operación solicitada.");
+            }
+        }
+
+        protected void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            Posicion++;
+            this.CargarDatos();
+            this.MostrarDatos();
+        }
 
 
 

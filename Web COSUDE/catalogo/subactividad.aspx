@@ -1,20 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site2doNivel.Master" AutoEventWireup="true" CodeBehind="subactividad.aspx.cs" Inherits="Web_COSUDE.catalogo.subactividad" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphCSS1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphCSS2" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphCatalogoMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphControlAsistenciaMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="cphGestionUsuarioMenuActivo" runat="server">
-</asp:Content>
+
+
+
 <asp:Content ID="Content6" ContentPlaceHolderID="cphTituloForm" runat="server">
     SubActividad
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="cphFormulario" runat="server">
 
-        <form id="frmEfecto" runat="server">
+    <form id="frmEfecto" runat="server">
         <table class="tbfrm">
             <tr>
                 <td colspan="2">
@@ -74,7 +72,7 @@
                     </div>
                 </td>
             </tr>
-            
+
             <tr>
                 <td colspan="2">
                     <br />
@@ -118,12 +116,15 @@
                         <asp:LinkButton ID="btnAnterior" runat="server" Text="<span class='glyphicon glyphicon-backward'></span>" CssClass="btn btn-primary" />
                         <asp:LinkButton ID="btnSiguiente" runat="server" Text="<span class='glyphicon glyphicon-forward'></span>" CssClass="btn btn-primary" />
                         <asp:LinkButton ID="btnUltimo" runat="server" Text="<span class='glyphicon glyphicon-fast-forward'></span>" CssClass="btn btn-primary" />
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            Ver Participantes
+                        </button>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td class="botones-catalogo" colspan="2">
-
+                    
                     <div class="btn-catalogo-crud">
                         <asp:Button CssClass="btn btn-primary" Text="Nuevo" ID="btnNuevoEfecto" runat="server" />
                         <asp:Button CssClass="btn btn-primary" Text="Modificar" ID="btnModificarEfecto" runat="server" />
@@ -135,10 +136,37 @@
 
 
         </table>
+
+
+            <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Asistentes a la Actividad</h4>
+      </div>
+      <div class="modal-body">
+
+          <asp:GridView ID="ListaParticipantes" runat="server"></asp:GridView>
+
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     </form>
 
 </asp:Content>
 <asp:Content ID="Content8" ContentPlaceHolderID="cphJS1" runat="server">
 </asp:Content>
 <asp:Content ID="Content9" ContentPlaceHolderID="cphJS2" runat="server">
+
+
 </asp:Content>

@@ -10,7 +10,7 @@
 namespace Web_COSUDE.catalogo {
     
     
-    public partial class persona {
+    public partial class prueba {
         
         /// <summary>
         /// Control Form1.
@@ -22,103 +22,31 @@ namespace Web_COSUDE.catalogo {
         protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
         
         /// <summary>
-        /// Control txbCedulaPersona.
+        /// Control txbIdentificadorActividad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbCedulaPersona;
+        protected global::System.Web.UI.WebControls.TextBox txbIdentificadorActividad;
         
         /// <summary>
-        /// Control txbNombrePersona.
+        /// Control cbListaEfecto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbNombrePersona;
+        protected global::System.Web.UI.WebControls.DropDownList cbListaEfecto;
         
         /// <summary>
-        /// Control rbSexo.
+        /// Control txbNombreResultado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbSexo;
-        
-        /// <summary>
-        /// Control rbH.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem rbH;
-        
-        /// <summary>
-        /// Control rbM.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem rbM;
-        
-        /// <summary>
-        /// Control txbEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbEdad;
-        
-        /// <summary>
-        /// Control txbTelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbTelefono;
-        
-        /// <summary>
-        /// Control txbemailPersona.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbemailPersona;
-        
-        /// <summary>
-        /// Control txbComunidadPersona.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txbComunidadPersona;
-        
-        /// <summary>
-        /// Control cbListaCargo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cbListaCargo;
-        
-        /// <summary>
-        /// Control cbListaInstitucion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cbListaInstitucion;
+        protected global::System.Web.UI.WebControls.TextBox txbNombreResultado;
         
         /// <summary>
         /// Control btnPrimero.

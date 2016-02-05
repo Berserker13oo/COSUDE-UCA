@@ -3,6 +3,9 @@ a.previous, a.next, a.previous:link, a.next:link
     color: #337ab7;
 }
 
+div.dataTables_info {
+    font-weight: bold;
+}
 table.tbfrm{
 	width: 100%;
 	border: none;		
@@ -22,6 +25,29 @@ table.tbfrm tr td.tam-mitad{
     width: 50%;
 }
 
+table#tbdatos thead 
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+table#tbdatos tbody td button:last-child
+{
+    margin-left:9%;
+}
+
+tr.tablebotones td {
+    background: white;
+    border: none;
+}
+
+table#tbdatos tbody td.centrar {
+    text-align: center;
+}
+
+table#tbdatos tbody td.justificar {
+    text-align: justify;
+}
 
 td.botones-catalogo {
     text-align: center;
@@ -31,6 +57,8 @@ td.botones-catalogo {
 td.botones-catalogo .btn-catalogo-crud, td.botones-catalogo .btn-catalogo-navegacion {
     display: inline;
 }
+
+
 
 
 .btn-catalogo-navegacion a:visited, .btn-catalogo-navegacion a.visited, .btn-catalogo-navegacion a:link, .btn-catalogo-navegacion a{    

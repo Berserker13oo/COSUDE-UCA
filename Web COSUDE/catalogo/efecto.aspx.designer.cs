@@ -58,13 +58,13 @@ namespace Web_COSUDE.catalogo {
         protected global::System.Web.UI.WebControls.TextBox txbDescripcionEfecto;
         
         /// <summary>
-        /// Control a.
+        /// Control btnPrimero.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton a;
+        protected global::System.Web.UI.WebControls.LinkButton btnPrimero;
         
         /// <summary>
         /// Control btnAnterior.

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="ModelStoreContainer" />
         <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -114,7 +114,6 @@
           <Parameter Name="EfectoId" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="SPEfectoModificar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="EfechtoIDOriginal" Type="nvarchar" Mode="In" />
           <Parameter Name="EfechtoID" Type="nvarchar" Mode="In" />
           <Parameter Name="NombreEfecto" Type="nvarchar" Mode="In" />
           <Parameter Name="DescripcionEfecto" Type="nvarchar" Mode="In" />
@@ -157,6 +156,7 @@
         </Function>
         <Function Name="SPInstitucionAgregar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NombreInstitucion" Type="nvarchar" Mode="In" />
+          <Parameter Name="DescripcionInstitucion" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="SPInstitucionEliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="InstitucionID" Type="int" Mode="In" />
@@ -166,6 +166,10 @@
           <Parameter Name="InstitucionID" Type="int" Mode="In" />
         </Function>
         <Function Name="SPInstitucionObtener" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SPListaActividades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SPObtener_Asistentes_SubActividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SubActividadID" Type="int" Mode="In" />
+        </Function>
         <Function Name="SPObtenerEfecto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SPOrganizacionAgregar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NombreOrganizacion" Type="nvarchar" Mode="In" />
@@ -264,8 +268,7 @@
         <Function Name="SPSubActividadPersonaSelectSubActividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SubAcividadID" Type="int" Mode="In" />
         </Function>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -311,7 +314,7 @@
             <Parameter Name="FechaInicioEstablecida" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="SPActividadEliminar">
-            <Parameter Name="ActividadID" Mode="In" Type="String" />
+          <Parameter Name="ActividadID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPActividadModoficar">
             <Parameter Name="ActividadID" Mode="In" Type="String" />
@@ -324,10 +327,10 @@
             <Parameter Name="FechaInicioEstablecida" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="SPActividadObtener" ReturnType="Collection(Model.SPActividadObtener_Result)">
-            <Parameter Name="ActividadID" Mode="In" Type="String" />
+          <Parameter Name="ActividadID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPAsistenciaBuscar" ReturnType="Collection(Int32)">
-            <Parameter Name="Cedula_Carnet" Mode="In" Type="String" />
+          <Parameter Name="Cedula_Carnet" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPAsistenciaIngresar">
             <Parameter Name="PersonaID" Mode="In" Type="Int32" />
@@ -339,7 +342,7 @@
             <Parameter Name="DescripcionCargo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPCargoEliminar">
-            <Parameter Name="CargoID" Mode="In" Type="Int32" />
+          <Parameter Name="CargoID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPCargoModificar">
             <Parameter Name="CargoID" Mode="In" Type="Int32" />
@@ -355,7 +358,7 @@
             <Parameter Name="IndicadorID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPDocumentoEliminar">
-            <Parameter Name="DocumentoID" Mode="In" Type="Int32" />
+          <Parameter Name="DocumentoID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPDocumentoModificar">
             <Parameter Name="Titulo" Mode="In" Type="String" />
@@ -366,7 +369,7 @@
             <Parameter Name="DocumentoID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPDocumentoObtener" ReturnType="Collection(Model.SPDocumentoObtener_Result)">
-            <Parameter Name="DocumentoID" Mode="In" Type="Int32" />
+          <Parameter Name="DocumentoID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPEfectoAgregar">
             <Parameter Name="EfectoID" Mode="In" Type="String" />
@@ -374,13 +377,7 @@
             <Parameter Name="DescripcionEfecto" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPEfectoEliminar">
-            <Parameter Name="EfectoId" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SPEfectoModificar">
-            <Parameter Name="EfechtoIDOriginal" Mode="In" Type="String" />
-            <Parameter Name="EfechtoID" Mode="In" Type="String" />
-            <Parameter Name="NombreEfecto" Mode="In" Type="String" />
-            <Parameter Name="DescripcionEfecto" Mode="In" Type="String" />
+          <Parameter Name="EfectoId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPGuardarIndicardor">
             <Parameter Name="IDActividad" Mode="In" Type="String" />
@@ -402,7 +399,7 @@
             <Parameter Name="IndicadorProgresoPersonas" Mode="In" Type="Double" />
           </FunctionImport>
           <FunctionImport Name="SPIndicadorEliminar">
-            <Parameter Name="IndicadorID" Mode="In" Type="Int32" />
+          <Parameter Name="IndicadorID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPIndicadorModificar">
             <Parameter Name="IndicadorID" Mode="In" Type="Int32" />
@@ -416,13 +413,10 @@
             <Parameter Name="IndicadorProgresoPersonas" Mode="In" Type="Double" />
           </FunctionImport>
           <FunctionImport Name="SPIndicadorObtener" ReturnType="Collection(Model.SPIndicadorObtener_Result)">
-            <Parameter Name="Actividad" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="SPInstitucionAgregar">
-            <Parameter Name="NombreInstitucion" Mode="In" Type="String" />
+          <Parameter Name="Actividad" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPInstitucionEliminar">
-            <Parameter Name="InstitucionID" Mode="In" Type="Int32" />
+          <Parameter Name="InstitucionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPInstitucionModificar">
             <Parameter Name="NombreInstitucion" Mode="In" Type="String" />
@@ -440,7 +434,7 @@
             <Parameter Name="FechaEntrega" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="SPOrganizacionEliminar">
-            <Parameter Name="OrganizacionID" Mode="In" Type="Int32" />
+          <Parameter Name="OrganizacionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPOrganizacionModificar">
             <Parameter Name="NombreOrganizacion" Mode="In" Type="String" />
@@ -453,7 +447,7 @@
             <Parameter Name="OrganizacionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPOrganizacionObtener" ReturnType="Collection(Model.SPOrganizacionObtener_Result)">
-            <Parameter Name="OrganizacionID" Mode="In" Type="Int32" />
+          <Parameter Name="OrganizacionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPPersonaAgregar">
             <Parameter Name="Cedula_Carnet" Mode="In" Type="String" />
@@ -467,7 +461,7 @@
             <Parameter Name="InstitucionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPPersonaEliminar">
-            <Parameter Name="PersonaID" Mode="In" Type="Int32" />
+          <Parameter Name="PersonaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPPersonaModificar">
             <Parameter Name="PersonaID" Mode="In" Type="Int32" />
@@ -482,7 +476,7 @@
             <Parameter Name="InstitucionID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPPersonaObtener" ReturnType="Collection(Model.SPPersonaObtener_Result)">
-            <Parameter Name="PersonaID" Mode="In" Type="Int32" />
+          <Parameter Name="PersonaID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPResultadoAgregar">
             <Parameter Name="ResultadoID" Mode="In" Type="String" />
@@ -490,7 +484,7 @@
             <Parameter Name="EfectoID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPResultadoEliminar">
-            <Parameter Name="ResultadoID" Mode="In" Type="String" />
+          <Parameter Name="ResultadoID" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SPResultadoModificar">
             <Parameter Name="ResultadoIDOriginal" Mode="In" Type="String" />
@@ -506,7 +500,7 @@
             <Parameter Name="indicadorID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPSubActividadEliminar">
-            <Parameter Name="subActividadID" Mode="In" Type="Int32" />
+          <Parameter Name="subActividadID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPSubActividadModificar">
             <Parameter Name="Fecha" Mode="In" Type="DateTime" />
@@ -525,8 +519,22 @@
             <Parameter Name="SubAcividadID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SPSubActividadPersonaSelectSubActividad" ReturnType="Collection(Model.SPSubActividadPersonaSelectSubActividad_Result)">
-            <Parameter Name="SubAcividadID" Mode="In" Type="Int32" />
+          <Parameter Name="SubAcividadID" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="SPEfectoModificar">
+            <Parameter Name="EfechtoID" Mode="In" Type="String" />
+            <Parameter Name="NombreEfecto" Mode="In" Type="String" />
+            <Parameter Name="DescripcionEfecto" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPInstitucionAgregar">
+            <Parameter Name="NombreInstitucion" Mode="In" Type="String" />
+            <Parameter Name="DescripcionInstitucion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPObtener_Asistentes_SubActividad" ReturnType="Collection(Model.SPObtener_Asistentes_SubActividad_Result)">
+          <Parameter Name="SubActividadID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SPListaActividades" ReturnType="Collection(Model.SPListaActividades_Result)" />
+          <FunctionImport Name="SPListaActividades1" ReturnType="Collection(Model.SPListaActividades1_Result)" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -624,6 +632,37 @@
           <Property Type="String" Name="Institución" Nullable="false" MaxLength="250" />
           <Property Type="String" Name="Cargo" Nullable="true" MaxLength="250" />
         </ComplexType>
+        <ComplexType Name="SPObtener_Asistentes_SubActividad_Result">
+          <Property Type="String" Name="Carnet_o_Cedula" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="Cargo" Nullable="false" />
+          <Property Type="Int32" Name="Institución" Nullable="false" />
+          <Property Type="Int32" Name="Edad" Nullable="true" />
+          <Property Type="String" Name="Sexo" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Comunidad" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Correo_Electronico" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="SPListaActividades_Result">
+          <Property Type="String" Name="ActividadID" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="NombreActividad" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="Resultado" Nullable="false" MaxLength="250" />
+          <Property Type="DateTime" Name="FechaFinEjecucion" Nullable="true" />
+          <Property Type="DateTime" Name="FechaInicioEjecucion" Nullable="true" />
+          <Property Type="DateTime" Name="FechaFinEstablecida" Nullable="true" />
+          <Property Type="DateTime" Name="FechaInicioEstablecida" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SPListaActividades1_Result">
+          <Property Type="String" Name="ActividadID" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="NombreActividad" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="Resultado" Nullable="false" MaxLength="250" />
+          <Property Type="DateTime" Name="FechaFinEjecucion" Nullable="true" />
+          <Property Type="DateTime" Name="FechaInicioEjecucion" Nullable="true" />
+          <Property Type="DateTime" Name="FechaFinEstablecida" Nullable="true" />
+          <Property Type="DateTime" Name="FechaInicioEstablecida" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -702,7 +741,6 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SPEfectoAgregar" FunctionName="Model.Store.SPEfectoAgregar" />
           <FunctionImportMapping FunctionImportName="SPEfectoEliminar" FunctionName="Model.Store.SPEfectoEliminar" />
-          <FunctionImportMapping FunctionImportName="SPEfectoModificar" FunctionName="Model.Store.SPEfectoModificar" />
           <FunctionImportMapping FunctionImportName="SPGuardarIndicardor" FunctionName="Model.Store.SPGuardarIndicardor" />
           <FunctionImportMapping FunctionImportName="SPIndicadorAgregar" FunctionName="Model.Store.SPIndicadorAgregar" />
           <FunctionImportMapping FunctionImportName="SPIndicadorEliminar" FunctionName="Model.Store.SPIndicadorEliminar" />
@@ -722,7 +760,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="SPInstitucionAgregar" FunctionName="Model.Store.SPInstitucionAgregar" />
           <FunctionImportMapping FunctionImportName="SPInstitucionEliminar" FunctionName="Model.Store.SPInstitucionEliminar" />
           <FunctionImportMapping FunctionImportName="SPInstitucionModificar" FunctionName="Model.Store.SPInstitucionModificar" />
           <FunctionImportMapping FunctionImportName="SPInstitucionObtener" FunctionName="Model.Store.SPInstitucionObtener">
@@ -815,6 +852,51 @@
                 <ScalarProperty Name="Sexo" ColumnName="Sexo" />
                 <ScalarProperty Name="Institución" ColumnName="Institución" />
                 <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPEfectoModificar" FunctionName="Model.Store.SPEfectoModificar" />
+          <FunctionImportMapping FunctionImportName="SPInstitucionAgregar" FunctionName="Model.Store.SPInstitucionAgregar" />
+          <FunctionImportMapping FunctionImportName="SPObtener_Asistentes_SubActividad" FunctionName="Model.Store.SPObtener_Asistentes_SubActividad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.SPObtener_Asistentes_SubActividad_Result">
+                <ScalarProperty Name="Carnet_o_Cedula" ColumnName="Carnet o Cedula" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Institución" ColumnName="Institución" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
+                <ScalarProperty Name="Correo_Electronico" ColumnName="Correo Electronico" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPListaActividades" FunctionName="Model.Store.SPListaActividades">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.SPListaActividades_Result">
+                <ScalarProperty Name="ActividadID" ColumnName="ActividadID" />
+                <ScalarProperty Name="NombreActividad" ColumnName="NombreActividad" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="FechaFinEjecucion" ColumnName="FechaFinEjecucion" />
+                <ScalarProperty Name="FechaInicioEjecucion" ColumnName="FechaInicioEjecucion" />
+                <ScalarProperty Name="FechaFinEstablecida" ColumnName="FechaFinEstablecida" />
+                <ScalarProperty Name="FechaInicioEstablecida" ColumnName="FechaInicioEstablecida" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPListaActividades1" FunctionName="Model.Store.SPListaActividades">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.SPListaActividades1_Result">
+                <ScalarProperty Name="ActividadID" ColumnName="ActividadID" />
+                <ScalarProperty Name="NombreActividad" ColumnName="NombreActividad" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+                <ScalarProperty Name="FechaFinEjecucion" ColumnName="FechaFinEjecucion" />
+                <ScalarProperty Name="FechaInicioEjecucion" ColumnName="FechaInicioEjecucion" />
+                <ScalarProperty Name="FechaFinEstablecida" ColumnName="FechaFinEstablecida" />
+                <ScalarProperty Name="FechaInicioEstablecida" ColumnName="FechaInicioEstablecida" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

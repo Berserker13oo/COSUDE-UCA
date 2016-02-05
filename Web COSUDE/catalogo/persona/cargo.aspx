@@ -4,12 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphCSS2" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphCatalogoMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphControlAsistenciaMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="cphGestionUsuarioMenuActivo" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content6" ContentPlaceHolderID="cphTituloForm" runat="server">
     Cargo
 </asp:Content>

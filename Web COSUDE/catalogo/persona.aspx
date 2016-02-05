@@ -4,15 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphCSS2" runat="server">
     <link href="../bootstrapformhelpers/css/bootstrap-formhelpers.min.css" rel="stylesheet" />
-    <link href="../css/select2.min.css" rel="stylesheet" />   
+    <link href="../css/select2.min.css" rel="stylesheet" />
 
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphCatalogoMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphControlAsistenciaMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="cphGestionUsuarioMenuActivo" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content6" ContentPlaceHolderID="cphTituloForm" runat="server">
     Persona
 </asp:Content>
@@ -22,7 +17,7 @@
             <tr>
                 <td colspan="3">
                     <div class="form-group">
-                        <label for="lbIdentificador">Cedula o Carnet de la Persona:</label>                        
+                        <label for="lbIdentificador">Cedula o Carnet de la Persona:</label>
                         <asp:TextBox ID="txbCedulaPersona" runat="server" CssClass="form-control" placeholder="Cedula o Carnet de la Persona" />
                     </div>
                 </td>
@@ -30,7 +25,7 @@
             <tr>
                 <td colspan="3">
                     <div class="form-group">
-                        <label for="lbNombrePersona">Nombre:</label>                        
+                        <label for="lbNombrePersona">Nombre:</label>
                         <asp:TextBox ID="txbNombrePersona" runat="server" CssClass="form-control" placeholder="Nombre de la Persona" />
                     </div>
                 </td>
@@ -39,26 +34,23 @@
                 <td class="tam-tercera-parte">
                     <div class="form-group">
                         <label for="lbNombrePersona">Sexo:</label>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="rbHombre" value="true" checked>Hombre
-                            </label>
-
-                            <label>
-                                <input type="radio" name="optionsRadios" id="rbMujer" value="false">Mujer
-                            </label>
-                        </div>
+                        
+                        <asp:RadioButtonList ID="rbSexo" runat="server"
+                            RepeatDirection="Horizontal" RepeatLayout="Table">
+                            <asp:ListItem ID="rbH" Text="Hombre" Value="1"></asp:ListItem>
+                            <asp:ListItem ID="rbM" Text="Mujer" Value="0"></asp:ListItem>                            
+                        </asp:RadioButtonList>
                     </div>
                 </td>
                 <td class="tam-tercera-parte">
                     <div class="form-group">
-                        <label for="lbEdadPersona">Edad:</label>                                             
+                        <label for="lbEdadPersona">Edad:</label>
                         <asp:TextBox ID="txbEdad" runat="server" CssClass="form-control bfh-number" data-min="14" data-max="99" />
                     </div>
                 </td>
                 <td class="tam-tercera-parte">
                     <div class="form-group">
-                        <label for="lbTelefonoPersona">Telefono:</label>                                               
+                        <label for="lbTelefonoPersona">Telefono:</label>
                         <asp:TextBox ID="txbTelefono" runat="server" CssClass="form-control bfh-phone" data-format="505 dddd dddd" />
                     </div>
                 </td>
@@ -66,7 +58,7 @@
             <tr>
                 <td colspan="3">
                     <div class="form-group">
-                        <label for="lbemailPersona">Correo Electrónico:</label>                        
+                        <label for="lbemailPersona">Correo Electrónico:</label>
                         <asp:TextBox ID="txbemailPersona" runat="server" CssClass="form-control" placeholder="Correo Electrónico de la Persona" />
                     </div>
                 </td>
@@ -74,7 +66,7 @@
             <tr>
                 <td colspan="3">
                     <div class="form-group">
-                        <label for="lbComunidadPersona">Comunidad:</label>                        
+                        <label for="lbComunidadPersona">Comunidad:</label>
                         <asp:TextBox ID="txbComunidadPersona" runat="server" CssClass="form-control" placeholder="Comunidad de la Persona" />
                     </div>
                 </td>
@@ -127,7 +119,7 @@
                         <asp:Button CssClass="btn btn-primary" Text="Nuevo" ID="btnNuevoEfecto" runat="server" />
                         <asp:Button CssClass="btn btn-primary" Text="Modificar" ID="btnModificarEfecto" runat="server" />
                         <asp:Button CssClass="btn btn-primary" Text="Eliminar" ID="btnEliminarEfecto" runat="server" />
-                        <asp:Button CssClass="btn btn-primary" Text="Guardar" ID="btnGuardarEfecto" runat="server" />
+                        <asp:Button CssClass="btn btn-primary" Text="Guardar" ID="btnGuardarEfecto" runat="server" OnClick="btnGuardarEfecto_Click" />
                     </div>
                 </td>
             </tr>
@@ -157,6 +149,6 @@
             });
         });
     </script>
-    
+
 
 </asp:Content>

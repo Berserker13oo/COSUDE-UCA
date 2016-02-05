@@ -392,27 +392,6 @@ namespace Web_COSUDE.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPEfectoEliminar", efectoIdParameter);
         }
     
-        public virtual int SPEfectoModificar(string efechtoIDOriginal, string efechtoID, string nombreEfecto, string descripcionEfecto)
-        {
-            var efechtoIDOriginalParameter = efechtoIDOriginal != null ?
-                new ObjectParameter("EfechtoIDOriginal", efechtoIDOriginal) :
-                new ObjectParameter("EfechtoIDOriginal", typeof(string));
-    
-            var efechtoIDParameter = efechtoID != null ?
-                new ObjectParameter("EfechtoID", efechtoID) :
-                new ObjectParameter("EfechtoID", typeof(string));
-    
-            var nombreEfectoParameter = nombreEfecto != null ?
-                new ObjectParameter("NombreEfecto", nombreEfecto) :
-                new ObjectParameter("NombreEfecto", typeof(string));
-    
-            var descripcionEfectoParameter = descripcionEfecto != null ?
-                new ObjectParameter("DescripcionEfecto", descripcionEfecto) :
-                new ObjectParameter("DescripcionEfecto", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPEfectoModificar", efechtoIDOriginalParameter, efechtoIDParameter, nombreEfectoParameter, descripcionEfectoParameter);
-        }
-    
         public virtual int SPGuardarIndicardor(string iDActividad, Nullable<double> indicardorMetaDocumentos, Nullable<double> indicadorProgresoDocumentos, Nullable<double> indicadorMetaOrganizacion, Nullable<double> indicadorProgresoOrganzacion, Nullable<double> indicadorMetaPersona, Nullable<double> indicadorProgresoPersona)
         {
             var iDActividadParameter = iDActividad != null ?
@@ -540,15 +519,6 @@ namespace Web_COSUDE.Modelo
                 new ObjectParameter("Actividad", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPIndicadorObtener_Result>("SPIndicadorObtener", actividadParameter);
-        }
-    
-        public virtual int SPInstitucionAgregar(string nombreInstitucion)
-        {
-            var nombreInstitucionParameter = nombreInstitucion != null ?
-                new ObjectParameter("NombreInstitucion", nombreInstitucion) :
-                new ObjectParameter("NombreInstitucion", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPInstitucionAgregar", nombreInstitucionParameter);
         }
     
         public virtual int SPInstitucionEliminar(Nullable<int> institucionID)
@@ -920,6 +890,55 @@ namespace Web_COSUDE.Modelo
                 new ObjectParameter("SubAcividadID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPSubActividadPersonaSelectSubActividad_Result>("SPSubActividadPersonaSelectSubActividad", subAcividadIDParameter);
+        }
+    
+        public virtual int SPEfectoModificar(string efechtoID, string nombreEfecto, string descripcionEfecto)
+        {
+            var efechtoIDParameter = efechtoID != null ?
+                new ObjectParameter("EfechtoID", efechtoID) :
+                new ObjectParameter("EfechtoID", typeof(string));
+    
+            var nombreEfectoParameter = nombreEfecto != null ?
+                new ObjectParameter("NombreEfecto", nombreEfecto) :
+                new ObjectParameter("NombreEfecto", typeof(string));
+    
+            var descripcionEfectoParameter = descripcionEfecto != null ?
+                new ObjectParameter("DescripcionEfecto", descripcionEfecto) :
+                new ObjectParameter("DescripcionEfecto", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPEfectoModificar", efechtoIDParameter, nombreEfectoParameter, descripcionEfectoParameter);
+        }
+    
+        public virtual int SPInstitucionAgregar(string nombreInstitucion, string descripcionInstitucion)
+        {
+            var nombreInstitucionParameter = nombreInstitucion != null ?
+                new ObjectParameter("NombreInstitucion", nombreInstitucion) :
+                new ObjectParameter("NombreInstitucion", typeof(string));
+    
+            var descripcionInstitucionParameter = descripcionInstitucion != null ?
+                new ObjectParameter("DescripcionInstitucion", descripcionInstitucion) :
+                new ObjectParameter("DescripcionInstitucion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPInstitucionAgregar", nombreInstitucionParameter, descripcionInstitucionParameter);
+        }
+    
+        public virtual ObjectResult<SPObtener_Asistentes_SubActividad_Result> SPObtener_Asistentes_SubActividad(Nullable<int> subActividadID)
+        {
+            var subActividadIDParameter = subActividadID.HasValue ?
+                new ObjectParameter("SubActividadID", subActividadID) :
+                new ObjectParameter("SubActividadID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPObtener_Asistentes_SubActividad_Result>("SPObtener_Asistentes_SubActividad", subActividadIDParameter);
+        }
+    
+        public virtual ObjectResult<SPListaActividades_Result> SPListaActividades()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPListaActividades_Result>("SPListaActividades");
+        }
+    
+        public virtual ObjectResult<SPListaActividades1_Result> SPListaActividades1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPListaActividades1_Result>("SPListaActividades1");
         }
     }
 }

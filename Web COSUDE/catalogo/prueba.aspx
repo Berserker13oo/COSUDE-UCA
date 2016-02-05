@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site2doNivel.Master" AutoEventWireup="true" CodeBehind="resultado.aspx.cs" Inherits="Web_COSUDE.catalogo.resultado" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site2doNivel.Master" AutoEventWireup="true" CodeBehind="prueba.aspx.cs" Inherits="Web_COSUDE.catalogo.prueba" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphCSS1" runat="server">
 </asp:Content>
@@ -8,7 +8,7 @@
 
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cphTituloForm" runat="server">
-    Resultado
+    Prueba
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="cphFormulario" runat="server">
 
@@ -30,6 +30,7 @@
                             <asp:ListItem />                            
                         </asp:DropDownList>
                     </div>
+
                 </td>
             </tr>
             <tr>
@@ -78,10 +79,10 @@
                 allowClear: true,
                 language: "es"
             });
-        });       
+        });
 
 
-        
+
 
         //function selecOp() {
         //    var ID = document.getElementById("cphFormulario_cbListaEfecto");
@@ -91,3 +92,4 @@
     </script>
 
 </asp:Content>
+

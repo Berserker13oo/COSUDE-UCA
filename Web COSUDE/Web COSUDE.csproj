@@ -74,10 +74,12 @@
     <Content Include="catalogo\actividad.aspx" />
     <Content Include="catalogo\documento.aspx" />
     <Content Include="catalogo\efecto.aspx" />
+    <Content Include="catalogo\efectos.aspx" />
     <Content Include="catalogo\organizacion.aspx" />
     <Content Include="catalogo\persona.aspx" />
     <Content Include="catalogo\persona\cargo.aspx" />
     <Content Include="catalogo\persona\institucion.aspx" />
+    <Content Include="catalogo\prueba.aspx" />
     <Content Include="catalogo\resultado.aspx" />
     <Content Include="catalogo\subactividad.aspx" />
     <Content Include="css\estilos.css" />
@@ -191,6 +193,13 @@
     <Compile Include="catalogo\efecto.aspx.designer.cs">
       <DependentUpon>efecto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="catalogo\efectos.aspx.cs">
+      <DependentUpon>efectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\efectos.aspx.designer.cs">
+      <DependentUpon>efectos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="catalogo\organizacion.aspx.cs">
       <DependentUpon>organizacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,6 +227,13 @@
     </Compile>
     <Compile Include="catalogo\persona\institucion.aspx.designer.cs">
       <DependentUpon>institucion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="catalogo\prueba.aspx.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="catalogo\prueba.aspx.designer.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="catalogo\resultado.aspx.cs">
       <DependentUpon>resultado.aspx</DependentUpon>
@@ -285,7 +301,16 @@
     <Compile Include="Modelo\SPInstitucionObtener_Result.cs">
       <DependentUpon>CosudeEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SPListaActividades1_Result.cs">
+      <DependentUpon>CosudeEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SPListaActividades_Result.cs">
+      <DependentUpon>CosudeEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SPObtenerEfecto_Result.cs">
+      <DependentUpon>CosudeEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SPObtener_Asistentes_SubActividad_Result.cs">
       <DependentUpon>CosudeEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\SPOrganizacionObtener_Result.cs">
@@ -374,7 +399,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>3043</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:2014/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

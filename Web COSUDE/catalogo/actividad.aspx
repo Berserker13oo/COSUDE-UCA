@@ -1,25 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site2doNivel.Master" AutoEventWireup="true" CodeBehind="actividad.aspx.cs" Inherits="Web_COSUDE.catalogo.actividad" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphCSS1" runat="server">
-
     <script src="../js/jquery-1.11.3.min.js"></script>
-
-
-
-
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphCSS2" runat="server">
 
     <link rel="stylesheet" href="../datepicker/css/bootstrap-datepicker3.min.css">    
      <link href="../css/select2.min.css" rel="stylesheet" />
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="cphCatalogoMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphControlAsistenciaMenuActivo" runat="server">
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="cphGestionUsuarioMenuActivo" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="cphTituloForm" runat="server">
     Actividad
@@ -116,8 +104,8 @@
             <tr>
                 <td colspan="2">
                     <div class="form-group">
-                        <label for="lbDescripcionEfecto">Descripción del efecto:</label>
-                        <asp:TextBox ID="txbDescripcionEfecto" TextMode="multiline" Rows="5" runat="server" CssClass="form-control" placeholder="Descripción de la Actividad" />
+                        <label for="lbDescripcionActividad">Descripción de la Actividad:</label>
+                        <asp:TextBox ID="txbDescripcionActividad" TextMode="multiline" Rows="5" runat="server" CssClass="form-control" placeholder="Descripción de la Actividad" />
                     </div>
                 </td>
             </tr>
@@ -140,7 +128,7 @@
                         <asp:Button CssClass="btn btn-primary" Text="Nuevo" ID="btnNuevoEfecto" runat="server" />
                         <asp:Button CssClass="btn btn-primary" Text="Modificar" ID="btnModificarEfecto" runat="server" />
                         <asp:Button CssClass="btn btn-primary" Text="Eliminar" ID="btnEliminarEfecto" runat="server" />
-                        <asp:Button CssClass="btn btn-primary" Text="Guardar" ID="btnGuardarEfecto" runat="server" />
+                        <asp:Button CssClass="btn btn-primary" Text="Guardar" ID="btnGuardarEfecto" runat="server" OnClick="btnGuardarEfecto_Click" />
                     </div>
                 </td>
             </tr>
